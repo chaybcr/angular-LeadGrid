@@ -1,0 +1,20 @@
+<igx-hierarchical-grid  class="hierarchicalGrid" [data]="Leadlist" (onColumnResized)="onResize($event)" [autoGenerate]="false"
+    [height]="'500px'" [width]="'100%'" [rowHeight]="'65px'" #hierarchicalGrid>
+
+    <igx-column field="LeadName" [resizable]="true"></igx-column>
+    <igx-column field="Total" dataType="number" [resizable]="true"></igx-column>
+    <igx-column field="AIDEnabled" dataType="number" [resizable]="true"></igx-column>
+    <igx-column field="NotStarted" dataType="number" [resizable]="true"></igx-column>
+    <igx-column field="PendingwithUser" dataType="number" [resizable]="true"></igx-column>
+    <igx-column field="PendingforApproval" dataType="number" [resizable]="true"></igx-column>
+    <igx-column field="RevisebyLead" dataType="number" [resizable]="true"></igx-column>
+
+    <igx-row-island [key]="'EmpList'" [autoGenerate]="false">
+      <igx-column field="EmployeeId" header="Employee Id" [resizable]="true"></igx-column>
+      <igx-column field="EmployeeName" header="Employee Name" [resizable]="true"></igx-column>
+      <igx-column field="Grade" dataType="number" [resizable]="true"></igx-column>
+      <igx-column field="Status"  [resizable]="true"></igx-column>
+    </igx-row-island>
+
+</igx-hierarchical-grid>
+
